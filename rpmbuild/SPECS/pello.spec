@@ -12,7 +12,8 @@ Requires:		python
 Requires:		bash
 BuildArch:		noarch
 
-%description	Compile to python byte code and run
+%description
+Compile to python byte code and run
 
 
 %prep

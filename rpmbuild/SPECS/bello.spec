@@ -10,7 +10,8 @@ Source0:        https://example.com/%{name}/releases/%{name}-%{version}.tar.gz
 Requires:       bash
 BuildArch:      noarch
 
-%description    Time to use hello world to learn RPM with Redhat.
+%description
+Time to use hello world to learn RPM with Redhat.
 
 
 %prep
