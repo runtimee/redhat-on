@@ -5,7 +5,7 @@ Summary:		Hello C WORLD
 
 License:		GPLv3+
 URL:			https://example.com/#{name}
-Source0:		https://example.com/#{name}/releases/#{name}-#{version}.tar.gz
+Source0:		https://example.com/#{name}/releases/%{name}-%{version}.tar.gz
 Patch0:			cello-output-first-patch.patch
 
 BuildRequires:	gcc
