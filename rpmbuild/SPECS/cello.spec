@@ -1,38 +1,37 @@
 Name:           cello
-Version:        
+Version:        1.0
 Release:        1%{?dist}
-Summary:        
+Summary:		Hello C WORLD
 
-License:        
-URL:            
-Source0:        
+License:		GPLv3+
+URL:			https://example.com/#{name}
+Source0:		https://example.com/#{name}/releases/#{name}-#{version}.tar.gz
+Patch0:			cello-output-first-patch.patch
 
-BuildRequires:  
-Requires:       
+BuildRequires:	gcc
+Requires:		make
 
 %description
-
+Use C to refresh a hello world program.
 
 %prep
 %autosetup
 
+%patch0
 
 %build
-%configure
-%make_build
-
+make %{?_smp_mflags}
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %make_install
 
 
 %files
-%license add-license-file-here
-%doc add-docs-here
+%license LICENSE
+%{_bindir}/%{name}
 
 
 
 %changelog
 * Sun Jun  7 2020 Cloud User
-- 
+- Program in C, again
