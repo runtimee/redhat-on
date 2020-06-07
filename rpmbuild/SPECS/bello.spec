@@ -1,16 +1,16 @@
 Name:           bello
-Version:        
+Version:        0.1
 Release:        1%{?dist}
-Summary:        
+Summary:        Hello world, in bash
 
-License:        
-URL:            
-Source0:        
+License:        GPLv3+
+URL:            https://example.com/%{name}
+Source0:        https://example.com/%{name}/releases/%{name}-%{version}.tar.gz
 
-BuildRequires:  
-Requires:       
+Requires:       bash
+BuildArch:      noarch
 
-%description
+%description    Time to use hello world to learn RPM with Redhat.
 
 
 %prep
@@ -18,21 +18,19 @@ Requires:
 
 
 %build
-%configure
-%make_build
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%make_install
-
+mkdir -p %{buildroot}/%{_bindir}
+install -m 0755 %{name} %{buildroot}/%{_bindir}/%{name}
 
 %files
-%license add-license-file-here
-%doc add-docs-here
+%license LICENSE
+%{_bindir}/%{name}
 
 
 
 %changelog
 * Sun Jun  7 2020 Cloud User
-- 
+- Write bello
+- Tar and copy
